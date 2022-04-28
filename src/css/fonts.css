@@ -39,7 +39,6 @@
     src: url('../fonts/Roboto-Regular.eot');
     src: local('Roboto Regular'),
         url('../fonts/?#iefix') format('embedded-opentype'),
-        url('../fonts/Roboto-Regular.woff2') format('woff2'),
         url('../fonts/Roboto-Regular.woff') format('woff'),
         url('../fonts/Roboto-Regular.ttf') format('truetype');
     font-weight: 400;

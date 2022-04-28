@@ -1,0 +1,33 @@
+@media (max-width: 1200px) {
+    .container {
+        max-width: 900px;
+    }
+    .promo {
+        &__header {
+            font-size: 35px;
+        }
+        &__subheader {
+            font-size: 19px;
+        }
+        &__icons {
+            width: 370px;
+        }
+        &__icon {
+            font-size: 13px;
+        }
+        &__link {
+            a {
+                font-size: 14px;
+            }
+        }
+    }
+    .benefits {
+        &__header {
+            font-size: 25px;
+        }
+        &__title {
+            font-size: 16px;
+        }
+    }
+}
+       
