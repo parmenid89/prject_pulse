@@ -22,12 +22,12 @@
         }
     }
     .benefits {
-        &__header {
-            font-size: 25px;
-        }
         &__title {
             font-size: 16px;
         }
+    }
+    .title {
+        font-size: 25px;
     }
 }
 @media (max-width: 991px) {
@@ -81,12 +81,12 @@
             font-size: 13px;
         }
     }
+    .title {
+        font-size: 20px;
+    }
     .benefits {
         min-height: 400px;
         padding: 45px 0 65px 0;
-        &__header {
-            font-size: 20px;
-        }
         &__title {
             font-size: 16px;
         }
@@ -109,7 +109,7 @@
         }
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 767px) { /* - проверить айкон бенефитс текст на этом диапазоне */
     .container {
         max-width: 560px;
     }
@@ -178,9 +178,6 @@
     .benefits {
         min-height: 360px;
         padding: 35px 0 35px 0;
-        &__header {
-            font-size: 20px;
-        }
         &__title {
             font-size: 16px;
         }
@@ -305,9 +302,6 @@
     }
     .benefits {
         padding: 29px 0 35px 0;
-        &__header {
-            font-size: 20px;
-        }
         &__title {
             font-size: 16px;
         }
