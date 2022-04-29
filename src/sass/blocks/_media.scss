@@ -109,7 +109,7 @@
         }
     }
 }
-@media (max-width: 767px) { /* - проверить айкон бенефитс текст на этом диапазоне */
+@media (max-width: 767px) {
     .container {
         max-width: 560px;
     }
@@ -140,6 +140,11 @@
             width: 200px;
             height: 30px;
             font-weight: 500;
+            font-size: 12px;
+        }
+        &_submit {
+            width: 100%;
+            height: 30px;
             font-size: 12px;
         }
     }
@@ -185,7 +190,7 @@
             margin-top: 40px;
         }
         &__icon {
-            width: 200px;
+            width: 160px;
             font-size: 11px;
             br {
                 display: list-item ;
@@ -195,9 +200,27 @@
             }
         }
         &__title {
-            font-size: 15px;
+            font-size: 14px;
             margin-bottom: 15px;
         }
+    }
+    .consultation {
+        padding: 70px 0;
+        &__descr {
+            font-size: 16px;
+            line-height: 25px;
+            text-align: center;
+        }
+    }
+    .title {
+        &_left {
+            line-height: 30px;
+            text-align: center;
+        }
+    }
+    .feed-form {
+        margin: 0 auto;
+        margin-top: 36px;
     }
 }
 @media (max-width: 575px) {
@@ -254,6 +277,12 @@
             width: 200px;
             height: 30px;
             font-weight: 500;
+            font-size: 10px;
+        }
+        &_submit {
+            margin-top: 15px;
+            width: 100%;
+            height: 30px;
             font-size: 10px;
         }
     }
@@ -328,6 +357,27 @@
         &__title {
             font-size: 15px;
             margin-bottom: 15px;
+        }
+    }
+    .consultation {
+        min-height: 500px;
+        padding: 70px 0;
+        &__descr {
+            font-size: 13px;
+            line-height: 25px;
+        }
+    }
+    .title {
+        &_left {
+            font-size: 19px;
+        }
+    }
+    .feed-form {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 36px;
+        input {
+            height: 40px;
         }
     }
 }
