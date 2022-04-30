@@ -29,7 +29,6 @@
     .title {
         font-size: 25px;
     }
-    
 }
 @media (max-width: 991px) {
     .container {
@@ -109,10 +108,47 @@
             margin-bottom: 15px;
         }
     }
+    .carousel {
+        &__inner {
+            width: 100%;
+        }
+    }
+    .carousel {
+        padding: 60px 0;
+        .prev, .next {
+            left: -25px;
+            img {
+                width: 25px;
+                height: 40px;
+            }
+        }
+        .next {
+            right: -25px;
+            left: auto;
+        }
+        .tns-item {
+            img {
+                display: block;
+                width: 90%;
+                margin: 0 auto; 
+            }
+        }
+    }
+    .catalog {
+        &__content {
+            display: none;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 60px;
+            &_active {
+                display: flex;
+            }
+        }
+    }
 }
 @media (max-width: 767px) {
     .container {
-        max-width: 560px;
+        max-width: 540px;
     }
     .header {
         &__logo {
@@ -222,6 +258,16 @@
     .feed-form {
         margin: 0 auto;
         margin-top: 36px;
+    }
+    .carousel {
+        padding: 80px 0;
+        .prev, .next {
+            left: -14px;
+        }
+        .next {
+            right: -14px;
+            left: auto;
+        }
     }
 }
 @media (max-width: 575px) {
@@ -379,6 +425,42 @@
         margin-top: 36px;
         input {
             height: 40px;
+        }
+    }
+    .carousel {
+        padding: 40px 0;
+        .prev, .next {
+            display: none;
+        }
+        .next {
+            display: none;
+        }
+    }
+    .tns-nav {
+        margin-top: 30px;
+    }
+    .catalog {
+        &__tabs {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 30px;
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        &__tab {
+            width: 252px;
+            height: 52px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        &__content {
+            margin-top: 30px;
+            &_active {
+                display: flex;
+                margin-top: 30px;
+            }
         }
     }
 }

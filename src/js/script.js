@@ -22,18 +22,23 @@ const slider = tns({
     slideBy: 'page',
     autoplay: false,
     controls: false,
-    nav: false,
+    mouseDrag: true,
+    nav: true,
+    navPosition: 'bottom',
     responsive: {
-        640: {
-          edgePadding: 20,
-          gutter: 20,
-          items: 2
+        320: {
+            edgePadding: 20,
+            gutter: 20,
+            items: 1
         },
-        700: {
-          gutter: 30
+        576: {
+            nav: false,
+        },
+        768: {
+            gutter: 400
         },
         992: {
-          items: 1
+            items: 1
         }
       }
 }); 

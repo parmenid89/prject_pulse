@@ -1,15 +1,17 @@
 .carousel {
     padding: 81px 0;
     &__inner {
+        display: flex;
         position: relative;
         width: 750px;
-        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
     }
     .prev, .next {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: -66px;
+        left: -40px;
         border: none;
         background-color: #fff;
         img {
@@ -18,13 +20,30 @@
         }
     }
     .next {
-        right: -66px;
+        right: -40px;
         left: auto;
     }
     .tns-item {
         img {
             display: block;
+            width: 100%;
             margin: 0 auto; 
         }
+    }.tns-nav {
+        text-align: center;
+    }
+    .tns-nav button {
+        height: 10px;
+        width: 8px;
+        background-color: rgba(202, 38, 38, 0.6);
+        border-radius: 100%;
+        border: none;
+        margin-left: 15px;
+        &:nth-child(1) {
+            margin-left: 0;
+        }
+    }
+    .tns-nav .tns-nav-active {
+        background-color: $main-color;
     }
 }
