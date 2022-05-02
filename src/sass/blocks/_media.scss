@@ -602,15 +602,13 @@
     }   
     .footer {
         position: relative;
-        width: 320px;
-        height: 250px;
+        height: 400px;
         &__info {
-            padding: 20px 10px 10px 10px;
             position: absolute;
-            width: 320px;
-            height: 100px;
+            padding: 20px 10px 10px 10px;
+            width: 100%;
             left: 0px;
-            top: 250px;
+            height: 50%;
             background: $main-color;
         }
         &__addr {
@@ -632,8 +630,9 @@
             }
         }
         iframe {
-            height: 60%;
+            display: block;
+            height: 50%;
         }
-    }
+    } 
 }
        
