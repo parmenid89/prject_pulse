@@ -31,7 +31,7 @@
     }
     .footer {
         &__info {
-            left: 55%;
+            left: 50%;
         }
         &__addr {
             font-size: 18px;
@@ -170,6 +170,35 @@
     }
     .footer {
         height: 430px;
+        &__info {
+            padding: 20px 40px 20px 40px;
+            position: absolute;
+            top: 0;
+            left: 80%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 150px;
+            background: $main-color;
+        }
+        &__addr {
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+        &__phone {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        &__social-item {
+            width: 30px;
+            height: 30px;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        iframe {
+            height: 470px;
+        }
     }
 }
 @media (max-width: 767px) {
@@ -309,6 +338,40 @@
         }
         &__count {
             font-size: 13px;
+        }
+    }
+    .footer {
+        height: 300px;
+        &__info {
+            padding: 20px 10px 10px 10px;
+            position: absolute;
+            width: 250px;
+            height: 100px;
+            top: 100%;
+            left: 170px;
+            transform: translateY(-100%);
+            background: $main-color;
+        }
+        &__addr {
+            margin-bottom: 10px;
+            font-size: 13px;
+            line-height: 10px;
+        }
+        &__phone {
+            font-size: 12px;
+            margin-bottom: 10px;
+            line-height: 12px;
+        }
+        &__social-item {
+            width: 30px;
+            height: 30px;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        iframe {
+            height: 100%;
         }
     }
 }
@@ -537,5 +600,40 @@
             display: none;
         }
     }   
+    .footer {
+        position: relative;
+        width: 320px;
+        height: 250px;
+        &__info {
+            padding: 20px 10px 10px 10px;
+            position: absolute;
+            width: 320px;
+            height: 100px;
+            left: 0px;
+            top: 250px;
+            background: $main-color;
+        }
+        &__addr {
+            margin-bottom: 10px;
+            font-size: 13px;
+            line-height: 10px;
+        }
+        &__phone {
+            font-size: 12px;
+            margin-bottom: 10px;
+            line-height: 12px;
+        }
+        &__social-item {
+            width: 30px;
+            height: 30px;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        iframe {
+            height: 60%;
+        }
+    }
 }
        
