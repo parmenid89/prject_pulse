@@ -59,45 +59,51 @@ $(document).ready(function(){
 	// Modal
 
 	$('[data-modal=consultation]').on('click', function() {
-		$('.overlay, #consultation').fadeIn('fast');
-	});
-	$('.modal__close').on('click', function() {
-		$('.overlay, #consultation, #thanks, #order').fadeOut('fast');
-	});
+        $('.overlay, #consultation').fadeIn('fast');
+    });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #thanks, #order').fadeOut('fast');
+    });
 
-	$('.button_mini').each(function(i) {
-		$(this).on('click', function() {
-			$('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
-			$('.overlay, #order').fadeIn('fast');
-		});
-	});
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('fast');
+        })
+    });
 
 	// Validate jQuery
 
-	function valideForms(form){
-		$(form).validate({
-			rules: {
-				name: "required",
-				phone: "required",
-				email: {
-					required: true,
-					email: true
-				}
-			},
-			messages: {
-				name: "Пожалуйста, введите Ваше имя",
-				phone: "Пожалуйста, введите свой телефон",
-				email: {
-					required: "Пожалуйста, введите Ваш e-mail",
-					email: "Ваш e-mail адрес должен быть в формате name@domain.com"
-				}
-			}
-		});
-	};
+	function validateForms(form){
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Пожалуйста, введите свое имя",
+                    minlength: jQuery.validator.format("Введите {0} символа!")
+                  },
+                phone: "Пожалуйста, введите свой номер телефона",
+                email: {
+                  required: "Пожалуйста, введите свою почту",
+                  email: "Неправильно введен адрес почты"
+                }
+            }
+        });
+    };
 
-	valideForms('#consultation-form');
-	valideForms('#consultation form');
-	valideForms('#order form');
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
 
 	//mask phone
 
@@ -118,6 +124,8 @@ $(document).ready(function(){
 			data: $(this).serialize()
 		}).done(function() {
 			$(this).find("input").val("");
+			$('#consultation, #order').fadeOut('fast');
+			$('.overlay, #thanks').fadeIn('fast');
 
 			$('form').trigger('reset');
 		});
