@@ -587,6 +587,11 @@
                 margin-right: 20px;
             }
         }
+        &-item__list {
+            li {
+                font-size: 12px;
+            }
+        }
     }
     .feed {
         padding: 0 0 20px 0;
@@ -677,6 +682,17 @@
             font-size: 11px;
             line-height: 12px;
             margin-top: 10px;
+        }
+    }
+    .pageup {
+        display: none;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        img {
+            width: 100%;
         }
     }
 }
